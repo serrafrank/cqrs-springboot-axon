@@ -15,7 +15,7 @@ public class CqrsApplication {
     public static void main(String[] args) {
         SpringApplication.run(CqrsApplication.class, args);
     }
-    
+
     @Bean
     public SnapshotTriggerDefinition inventoryAggregateSnapshotTriggerDefinition(Snapshotter snapshotter) {
         return new EventCountSnapshotTriggerDefinition(snapshotter, 20);
